@@ -6,11 +6,9 @@ services:
 ## Test if the container will start
 before_install:
   - docker pull seankross/ari-on-docker
-  - docker run --name ari-on-docker -dit seankross/ari-on-docker
+  - docker run -e PASSWORD=ari --name ari-on-docker -dit seankross/ari-on-docker
 ## Test basic ffmpeg functionality
 script:
   - docker cp ari_test.R ari-on-docker:ari_test.R
   - docker exec ari-on-docker Rscript ari_test.R
-  - rm -f output.mp4
-  - docker cp ari-on-docker:output.mp4 output.mp4
   - docker exec ari-on-docker Rscript -e 'testthat::expect_true(file.size("output.mp4") > 50000);'

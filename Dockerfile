@@ -17,4 +17,4 @@ RUN apt-get update \
   && install2.r --error --deps TRUE \
        magick googledrive tuber pdftools \
   && installGithub.r --deps TRUE \
-       muschellij2/ari muschellij2/didactr muschellij2/ariExtra
+       seankross/ari@dev muschellij2/didactr muschellij2/ariExtra

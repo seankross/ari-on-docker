@@ -18,7 +18,7 @@ command line interface for your [Linux distribution](https://docs.docker.com/ins
 3. Run: `docker pull seankross/ari-on-docker`
 4. Run: `docker run -dp 8787:8787 -e PASSWORD=ari -e ROOT=TRUE seankross/ari-on-docker`
 5. Navigate to <http://localhost:8787/> in your web browser.
-6. Log in to RStudio with Username `admin` and Password `ari`. All of Ari's
+6. Log in to RStudio with Username `rstudio` and Password `ari`. All of Ari's
 dependencies should be configured, so you can get started making videos.
 
 
